@@ -2,8 +2,16 @@ const path = require('path');
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const Parse = require('parse/node');
 
 const errorController = require('./controllers/error');
+
+const APP_ID = "TEvcqfS8FNapVkBw7D0DF9MjgBXJl6tc4weeWHli";
+
+const JAVASCRIPT_ID = '6fOIeKdaErQmcnyum1XTRyf6LquauZgpAeAgsR3d';
+
+Parse.initialize(APP_ID,JAVASCRIPT_ID);
+Parse.serverURL = 'https://parseapi.back4app.com/'
 
 const app = express();
 
